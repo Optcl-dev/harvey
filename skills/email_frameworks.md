@@ -285,6 +285,45 @@ Conversational, direct, helpful. Like a peer reaching out, not a vendor pitching
 
 ---
 
+## Optcl Domain & Language Specialization (Commercial Real Estate)
+
+### DACH Market Language Strategy (German)
+When writing for German prospects, determine register based on role and entity:
+
+#### 1. Peer / Founder / PropTech / Innovation Leads ("Du" Register)
+- Tone: Direct, collegiate, informal "Du" regardless of status.
+- Example Angle:
+> Hi {{first_name}},
+> 
+> KI krempelt gerade um, wie Gewerbeimmobilien vermarktet werden. Wer passende Mieter Monate vor dem Marktstart auf dem Schirm hat, schließt die Lücke im Leerstand.
+> 
+> Genau das machen wir bei Optcl: Wir liefern als präzise Mietersuchmaschine konkrete Unternehmen mit echtem Flächenbedarf direkt an eure Asset Manager. Ohne neue Software, die sich erst einlernen muss.
+> 
+> Lust auf einen kurzen, unverbindlichen Abgleich dazu nächste Woche?
+> 
+> Lasse
+
+#### 2. Institutional Landlords / Bauträger / Asset Managers ("Sie" Register)
+- Tone: Concise, respectful "Sie". Focus on hard capital metrics: Carry-Cost-Burn (€50k–€150k/Monat), Vorhaltekosten, EnEV/GEG-Compliance, Exit-Geschwindigkeit.
+- Example Angle:
+> Guten Tag Herr/Frau {{last_name}},
+> 
+> bei Projektentwicklungen wie {{project_or_asset}} zählt vor Fertigstellung jeder Monat Leerstand, um Vorhaltekosten zu vermeiden.
+> 
+> Mit Optcl fangen wir überregionale Expansionssignale von Unternehmen ab, bevor diese auf öffentlichen Portalen suchen, und projizieren deren Markenauftritt automatisiert in Ihre Grundrisse.
+> 
+> Hätten Sie nächste Woche Zeit für einen 15-minütigen Blick auf 2 konkrete Staging-Beispiele für Ihre Flächen?
+> 
+> Beste Grüße
+> Lasse Welz
+
+### International & UK/UAE Strategy (English)
+- Plain-text English.
+- Angle: Cologne-based engineering startup founder bridging cross-border corporate tenant demand into local commercial portfolios.
+- Zero jargon, zero throat-clearing. 15-minute screen share CTA.
+
+---
+
 ## The Test
 
 Before finalizing any email, ask:

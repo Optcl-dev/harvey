@@ -1,66 +1,96 @@
 persona:
-  name: "Harvey"
-  company: "Your Company"
-  role: "Business Development"
-  email: "harvey@yourcompany.com"
-  linkedin: "linkedin.com/in/harvey-yourcompany"
-  tone: "professional, consultative, confident"
+  name: "Lasse Welz"
+  company: "Optcl"
+  role: "Co-Founder & CEO"
+  email: "lasse@optcl.io"
+  linkedin: "https://www.linkedin.com/in/lasse-welz-115327187/"
+  tone: "direct, peer-to-peer founder-level communication, engineering-first, consultative, rigorously skeptical of hype, driven by empirical proof over marketing claims"
 
 product:
-  name: "Your Product"
-  description: "Describe what your product does and who it's for"
-  pricing: "Starting at $X/mo"
+  name: "Optcl Core"
+  description: "Predictive demand mapping engine for commercial real estate that intercepts corporate expansion signals to pre-let and monetize vacant commercial assets months before public portal listings."
+  pricing: "Pilot model: €3,500 setup + performance fee on lease closing"
   key_benefits:
-    - "Benefit 1"
-    - "Benefit 2"
-    - "Benefit 3"
+    - "Eradicating carry-cost burn (€50k–€150k+/month in vacancy interest and carrying charges)"
+    - "Compressing standard 12–18 month pre-letting cycles down to weeks"
+    - "Sub-4-hour signal-to-pitch execution with Dynamic Spatial Staging (rendering prospect brand CI directly onto floor plans)"
+    - "Cross-border corporate tenant access uncovering high-value demand outside local broker networks"
+    - "Zero software onboarding overhead — active acquisition engine feeding verified tenant leads directly into CRM"
   objection_responses:
-    "too expensive": "I understand budget is important. Most of our clients see ROI within 30 days..."
-    "already have a solution": "That makes sense. Curious — what's the one thing you wish it did better?"
-    "not interested": "No worries at all. Mind if I ask what your current approach looks like?"
+    "too expensive": "Wir sind kein Software-Tool, das monatliche Lizenzen verbrennt, sondern eine aktive Akquisitions-Engine. Jeder Monat Leerstand kostet bei einem solchen Objekt €50.000 bis €150.000 an Zinsen und Vorhaltekosten. Unser Pilotmodell ist performance-orientiert (€3.500 Setup zzgl. Erfolgshonorar) und rechnet sich bereits am Tag des ersten Vorvertrags."
+    "complex integration": "Für Ihr Team entsteht keinerlei Integrationsaufwand. Sie müssen keine neue Software lernen. Wir ziehen die Objektdaten direkt aus Ihren bestehenden PDF-Grundrissen oder synchronisieren über offene APIs mit Ihrem CRM (z. B. PropStack oder onOffice). Ihre physikalischen und rechtlichen Kennzahlen bleiben zu 100 % DSGVO- und EnEV-konform gesperrt."
+    "already have a broker": "Ihr bestehendes Maklernetzwerk ist eine feste Größe vor Ort. Aber ein lokales Netzwerk hat einen geographischen blinden Fleck für überregionale und internationale Expansionsentscheider (z. B. aus Paris, London, Amsterdam). Optcl scannt diese Expansionssignale ab und füttert qualifizierte Mieteranfragen direkt in die Pipeline Ihrer Makler."
   offer:
-    primary: ""                    # Main offer (e.g., "Monthly subscription starting at $99/mo")
-    entry: ""                      # Low-commitment entry (e.g., "14-day free trial", "Free audit")
-    goal: "book_call"              # Goal of outreach: book_call, start_trial, get_reply
-    booking_method: "calendar_link" # calendar_link, suggest_times, ask_preference
-    booking_url: ""                # Calendar link URL (if using calendar_link method)
-    meeting_duration: "15 minutes" # How long the call is
-    meeting_owner: ""              # Who takes the meeting (name or role)
+    primary: "Pilot Asset Calibration (€3.5k setup + performance fee on lease closing)"
+    entry: "Vacancy-to-Velocity Commercial Audit (15-minute screen share with 2-3 live dynamic staging screenshots)"
+    goal: "book_call"
+    booking_method: "calendar_link"
+    booking_url: "https://meetings-eu1.hubspot.com/optcl"
+    meeting_duration: "15 minutes"
+    meeting_owner: "Lasse Welz"
 
 icp:
   industries:
-    - "SaaS"
-    - "Marketing Agency"
-  company_size: "10-200 employees"
+    - "Commercial Real Estate Development"
+    - "Projektentwicklung"
+    - "Bauträger"
+    - "Asset Management"
+    - "Family Office Real Estate"
+    - "Gewerbeimmobilien"
+  company_size: "€10M-€100M GDV, 2,000-25,000 m² commercial assets"
   titles:
-    - "VP Marketing"
-    - "Head of Growth"
-    - "CMO"
-    - "Director of Marketing"
+    - "Geschäftsführer"
+    - "Managing Director"
+    - "Managing Partner"
+    - "Leiter Asset Management"
+    - "Head of Asset Management"
+    - "Leiter Gewerbevermietung"
+    - "Head of Commercial Leasing"
+    - "Director Real Estate Development"
+    - "Principal Broker"
+    - "Inhaber"
   geography:
-    - "United States"
-  # Roles that signal a company is in-market RIGHT NOW (a company hiring a
-  # "Head of Growth" is shopping for growth tooling). Used for careers-page
-  # scanning and job-board discovery. Empty = fall back to titles above.
-  hiring_signals: []
+    - "Cologne"
+    - "Frankfurt"
+    - "Munich"
+    - "Berlin"
+    - "Hamburg"
+    - "Düsseldorf"
+    - "Amsterdam"
+    - "London"
+  hiring_signals:
+    - "Leiter Gewerbevermietung"
+    - "Leasing Manager"
+    - "Vermietungsmanager"
+    - "Asset Manager Gewerbe"
+    - "Real Estate Development Manager"
+  geo_coordinates:
+    "Cologne": "50.9375,6.9603,40"
+    "Frankfurt": "50.1109,8.6821,40"
+    "Munich": "48.1351,11.5820,40"
+    "Berlin": "52.5200,13.4050,40"
+    "Hamburg": "53.5511,9.9937,40"
+    "Düsseldorf": "51.2277,6.7735,40"
+    "Amsterdam": "52.3676,4.9041,40"
+    "London": "51.5074,-0.1278,40"
 
 channels:
   email:
     enabled: true
-    provider: "gmail"          # gmail (recommended) | smtp | instantly
-    max_daily_sends: 50
-    require_approval: true      # native providers: emails wait in the Outbox
-    send_to_risky: false        # also send to catch-all domains (off = safest)
-    max_bounce_rate: 0.05       # pause all sending if bounces exceed this
+    provider: "gmail"          # gmail (OAuth) | smtp | instantly
+    max_daily_sends: 35        # sniper pacing for high deliverability
+    require_approval: true     # outgoing drafts wait in Outbox / Dashboard for review
+    send_to_risky: false       # only verified deliverable addresses
+    max_bounce_rate: 0.03      # strict kill-switch at 3% bounce rate
   linkedin:
-    enabled: true
-    max_daily_connections: 20
+    enabled: false             # Keep disabled initially until email pipeline is calibrated
+    max_daily_connections: 15
     max_daily_messages: 10
 
 usage:
-  max_daily_claude_percent: 80
+  max_daily_claude_percent: 75
   heartbeat_interval_minutes: 15
   quiet_hours:
-    start: "22:00"
-    end: "07:00"
-    timezone: "America/New_York"
+    start: "20:00"
+    end: "08:00"
+    timezone: "Europe/Berlin"

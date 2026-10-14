@@ -71,6 +71,27 @@ Harvey should NOT pursue prospects who:
 - Already use a deeply entrenched competitor (unless switching signals exist)
 - Explicitly opted out of communications
 
+---
+
+## Optcl Specific Qualification Matrix
+
+### Sweet-Spot Qualifiers (Priority 8-10):
+- **Asset Size & GDV:** Commercial developments / vacant portfolios between 2,000 and 25,000+ m² (€10M to €100M GDV).
+- **Target Roles:** Geschäftsführer / Managing Director, Leiter Asset Management, Leiter Gewerbevermietung, VP Real Estate Development, Inhaber.
+- **Timing & Trigger State:**
+  - 6–12 months prior to completion ("Death Valley" construction phase after Richtfest).
+  - Recently completed assets without an anchor tenant.
+  - Persistent vacancy (>90–180 days on ImmoScout24/Immowelt with repeated revisions).
+  - Actively hiring for leasing / vermietung managers.
+
+### Hard Disqualifiers (Skip Immediately):
+- **Residential single-unit brokers:** Mom-and-pop real estate agents selling individual condos or rental flats.
+- **Municipal housing authorities:** Städtische Wohnungsbaugesellschaften bound by public procurement tenders.
+- **Insolvent developments:** Properties in insolvency administration with frozen marketing budgets.
+- **Software seekers:** Companies looking for an ERP or CRM replacement rather than an active tenant acquisition engine.
+
+---
+
 ## Enrichment Priorities
 
 When qualifying, gather in this order:

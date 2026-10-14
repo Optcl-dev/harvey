@@ -42,6 +42,7 @@ SPAM FILTER RULES — these words and patterns get emails junked. NEVER use:
 PERSONALIZATION REQUIREMENTS — generic outreach is spam:
 - Email 1 must contain at least ONE specific, verifiable detail about the prospect: their role's actual day-to-day problem, their industry's current pressure, or something from the personalization notes provided.
 - If personalization notes are provided for a prospect, USE them. That is the hook.
+- LANGUAGE & REGISTER: If the prospect or company is located in Germany, Austria, or Switzerland (DACH), write in natural, idiomatic German. Use "Du" for Founders/PropTech leads and "Sie" for Asset Managers/Bauträger. If international, write in crisp plain-text English.
 - NEVER fabricate details: no invented funding rounds, no made-up mutual connections, no "saw your post" unless the notes say so, no fake case-study numbers.
 - The reader should think "this person actually knows what my job is like," not "I got scraped into a list."
 - Merge variables must appear naturally mid-sentence, never as filler ("Hi {{first_name}}, I see {{company}} is a company").

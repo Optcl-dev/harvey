@@ -53,6 +53,34 @@ Responses:
 
 ---
 
+## Optcl Core Objection Battlecards (Commercial Real Estate)
+
+### Objection 1: "We don't have budget for new software / marketing tools right now."
+**Root Cause**: Smokescreen / Software fatigue. They think you are selling an ERP or software subscription.
+**Strategy**: Reframe from "software cost" to "carry-cost hemorrhage" and performance alignment.
+**German Response**:
+> "Wir sind kein Software-Tool, das monatliche Lizenzen verbrennt, sondern eine aktive Akquisitions-Engine. Jeder Monat Leerstand kostet Sie bei diesem Objekt €50.000 bis €150.000 an Zinsen und Vorhaltekosten. Unser Pilotmodell ist performance-orientiert (€3.500 Setup zzgl. Erfolgshonorar) und rechnet sich bereits am Tag, an dem der erste Vorvertrag für die Fläche gezeichnet wird."
+**English Response**:
+> "We're not a software tool selling recurring seats. We're an active tenant acquisition engine. Every vacant month bleeds €50k–€150k in carry costs. Our pilot model is performance-aligned (€3.5k setup plus success fee upon lease closing) — paying for itself the day a pre-lease contract is signed."
+
+### Objection 2: "The technical integration and blueprint ingestion sounds too complex for our team."
+**Root Cause**: Operational friction fear.
+**Strategy**: Complete removal of internal work.
+**German Response**:
+> "Für Ihr Team entsteht keinerlei Integrationsaufwand. Sie müssen keine neue Software lernen. Wir ziehen die Objektdaten direkt aus Ihren bestehenden PDF-Grundrissen oder synchronisieren über offene APIs mit Ihrem CRM (z. B. PropStack oder onOffice). Ihre physikalischen und rechtlichen Kennzahlen bleiben zu 100 % DSGVO- und EnEV-konform gesperrt; wir übernehmen die Signalerkennung und das Brand-Staging im Hintergrund."
+**English Response**:
+> "There is zero onboarding burden on your team. No new software to learn. We ingest building data directly from your standard PDF architectural blueprints or sync via open CRM APIs (PropStack, onOffice, Salesforce). Physical and compliance metrics stay locked; our engine handles signal sensing and brand staging in the background."
+
+### Objection 3: "We already have an established broker network / lead agency managing this."
+**Root Cause**: Preserving existing commercial relationships.
+**Strategy**: Non-threatening augmentation. Optcl feeds the broker with cross-border liquidity.
+**German Response**:
+> "Ihr bestehendes Maklernetzwerk ist eine feste Größe vor Ort. Aber ein lokales Netzwerk hat einen geographischen blinden Fleck: Was ist mit Expansionsentscheidern aus Paris, London oder München, die überregional nach Standorten suchen? Optcl scannt diese Expansionssignale überregional ab und füttert qualifizierte Mieteranfragen direkt in die Pipeline Ihrer Makler. Wir ersetzen Ihr Netzwerk nicht, wir erweitern dessen Reichweite um internationale Liquidität."
+**English Response**:
+> "Your local brokers do great work on regional relationships. But local networks have a cross-border blindspot: they can't detect when an enterprise in Paris, London, or Munich files an expansion entity before it's public. Optcl captures those overregional expansion signals and feeds pre-qualified tenants directly into your broker's pipeline. We don't replace them; we expand their reach."
+
+---
+
 ## Diagnose Before You Respond
 
 The stated objection is rarely the real one. Before choosing a response, classify:

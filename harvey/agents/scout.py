@@ -25,6 +25,7 @@ Hardening notes:
 """
 
 import asyncio
+import base64
 import json
 import logging
 import random
@@ -434,6 +435,15 @@ class Scout:
             if not (link and link.get("href")):
                 continue
             href = self._attr_str(link.get("href"))
+            if "/ck/a?!" in href and "u=a1" in href:
+                try:
+                    params = parse_qs(urlparse(href).query)
+                    u_val = params.get("u", [""])[0]
+                    if u_val.startswith("a1"):
+                        b64 = u_val[2:] + "=" * (-len(u_val[2:]) % 4)
+                        href = base64.urlsafe_b64decode(b64).decode("utf-8", errors="ignore")
+                except Exception:
+                    pass
             snippet = snippet_el.get_text().strip() if snippet_el else ""
             if href.startswith("http"):
                 results.append((href, snippet))
@@ -1316,8 +1326,12 @@ Respond ONLY with the JSON array."""
 
     async def _scrape_team_page(self, domain: str) -> list[dict]:
         """Try to find and scrape a company's team/about page."""
-        team_paths = ["/team", "/about", "/about-us", "/our-team", "/people",
-                      "/leadership", "/about/team", "/company/team", "/staff"]
+        team_paths = [
+            "/impressum", "/de/impressum", "/ueber-uns", "/über-uns",
+            "/team", "/de/team", "/ansprechpartner", "/kontakt", "/de/kontakt",
+            "/about", "/about-us", "/our-team", "/people",
+            "/leadership", "/about/team", "/company/team", "/staff"
+        ]
         members = []
 
         base, _ = await self._resolve_base_url(domain)
@@ -1337,6 +1351,30 @@ Respond ONLY with the JSON array."""
             # Harvest any real address on the page — one confirmed email
             # reveals the domain's whole pattern (learned once, reused free).
             await self._learn_pattern_from_page(soup, resp.text, domain)
+
+            # German Impressum direct extraction for Geschäftsführer / Inhaber / Vorstand
+            if "impressum" in path.lower():
+                plain_text = soup.get_text("\n")
+                lines = [l.strip() for l in plain_text.splitlines() if l.strip()]
+                for i, line in enumerate(lines[:100]):
+                    if any(k in line.lower() for k in ("geschäftsführer", "vertretungsberechtigt", "inhaber", "vorstand")):
+                        # Look at the current line or next line for candidate names
+                        candidate_block = line
+                        if i + 1 < len(lines):
+                            candidate_block += " " + lines[i + 1]
+                        # Remove prefix keywords
+                        cleaned = re.sub(r"(?i)\b(geschäftsführer(in)?|vertretungsberechtigt(e[rn])?|inhaber(in)?|vorstand|vertreten durch|gemäß|§|\:|\-)\b", " ", candidate_block)
+                        for token in re.split(r"[,;&/]|\bund\b", cleaned):
+                            token = re.sub(r"\s+", " ", token).strip()
+                            words = token.split()
+                            if 2 <= len(words) <= 3 and all(w[0].isupper() for w in words if w):
+                                full_name = " ".join(words)
+                                if re.match(r"^[A-Za-z\u00C0-\u017F][A-Za-z\u00C0-\u017F.'\- ]+$", full_name):
+                                    members.append({
+                                        "first_name": words[0],
+                                        "last_name": " ".join(words[1:]),
+                                        "title": "Geschäftsführer",
+                                    })
 
             try:
                 cards = soup.select(
@@ -1365,7 +1403,7 @@ Respond ONLY with the JSON array."""
                     continue
                 if any(ch.isdigit() for ch in name):
                     continue
-                if not re.match(r"^[A-Za-z][A-Za-z.'\- ]+$", name):
+                if not re.match(r"^[A-Za-z\u00C0-\u017F][A-Za-z\u00C0-\u017F.'\- ]+$", name):
                     continue
 
                 parts = name.split(" ", 1)
@@ -1637,7 +1675,7 @@ Respond ONLY with the JSON array."""
             logger.info(f"Scout: signals for {domain} — {note}")
         return note[:400]
 
-    _CAREERS_PATHS = ("/careers", "/jobs", "/careers/", "/join-us", "/join",
+    _CAREERS_PATHS = ("/karriere", "/karriere/", "/stellenangebote", "/careers", "/jobs", "/careers/", "/join-us", "/join",
                       "/about/careers", "/company/careers", "/work-with-us")
 
     async def _scrape_hiring_signals(self, domain: str) -> list[str]:
@@ -1795,6 +1833,8 @@ Respond ONLY with the JSON array."""
             "g2.com", "capterra.com", "clutch.co",
             "trustpilot.com", "getapp.com", "producthunt.com",
             "youtu.be", "goo.gl", "bit.ly", "t.co",
+            "leo.org", "langenscheidt.com", "duden.de", "dict.cc", "googleapps.com",
+            "wiktionary.org", "immonet.de", "immobilienscout24.de", "immowelt.de",
         }
         if domain in noise:
             return True
@@ -1828,9 +1868,9 @@ Respond ONLY with the JSON array."""
         t = title.lower()
         if any(kw in t for kw in ["ceo", "cto", "cfo", "cmo", "coo", "cro",
                                   "chief", "founder", "co-founder", "owner",
-                                  "president"]) and "vice president" not in t:
+                                  "president", "geschäftsführer", "inhaber", "vorstand"]) and "vice president" not in t:
             return "c_suite"
-        if any(kw in t for kw in ["vp", "vice president", "svp", "evp", "head of"]):
+        if any(kw in t for kw in ["vp", "vice president", "svp", "evp", "head of", "leiter"]):
             return "vp"
         if "director" in t:
             return "director"

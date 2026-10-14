@@ -65,6 +65,30 @@ businesses.
 - **Angle**: the thing they haven't set up yet that you provide.
 - Keep it low-key — a brand-new company is drowning in vendor pitches.
 
+---
+
+## Optcl Commercial Real Estate Signal Playbook
+
+### 1. Structural Completion / Richtfest ("Death Valley" Phase)
+- **The Fact**: Construction reached shell completion; completion date is 6–12 months out, but no anchor tenant is announced. Carry-cost clock is ticking.
+- **Hook (German)**: "Ihr Projekt {{project_name}} nähert sich der Fertigstellung. Vor Übergabe zählt jeder Monat Vorlauf, um Vorhaltekosten zu vermeiden."
+- **Hook (English)**: "Noticed {{project_name}} is approaching completion. The months prior to handover are critical to prevent carry-cost burn before the doors open."
+
+### 2. Persistent Portal Vacancy (>90–180 Days Active Listing)
+- **The Fact**: Commercial listing has been sitting on ImmoScout24, Immowelt, or CoStar for months with floorplan revisions or price drops.
+- **Hook (German)**: "Die Gewerbefläche in {{location}} ist seit mehreren Monaten gelistet. Passive Portalanzeigen erreichen selten überregionale Expansionsentscheider außerhalb des lokalen Marktes."
+- **Hook (English)**: "Saw the commercial space at {{location}} has been listed for a while. Passive listings rarely intercept corporate tenants expanding from outside the immediate region."
+
+### 3. Developer Website "Flächen verfügbar" Stagnation
+- **The Fact**: Developer portfolio page shows unleased units with no recent status updates.
+- **Hook (German)**: "Auf Ihrer Projektseite zu {{project_name}} sind noch Flächen ausgewiesen. Wir projizieren Marken von expandierenden Unternehmen direkt in Ihre Grundrisse, bevor die Firmen öffentlich suchen."
+
+### 4. Hiring for Leasing Roles (Leiter Vermietung / Leasing Specialist)
+- **The Fact**: Developer or fund is hiring leasing specialists, signalling internal acquisition strain.
+- **Hook (German)**: "Habe gesehen, dass Sie Ihr Vermietungsteam für {{city}} ausbauen. Meistens bedeutet das spürbaren Druck auf die Pipeline..."
+
+---
+
 ## Which signal wins when there are several
 
 Rank by recency and actionability: **hiring > funding > tech-gap >
